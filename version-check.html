@@ -1,0 +1,7 @@
+<script>
+fetch("https://raw.githubusercontent.com/tomdonegan/hotkeys/main/version.json")
+  .then(r => r.json())
+  .then(data => {
+    parent.postMessage({ type: "version", version: data.version }, "*");
+  });
+</script>
